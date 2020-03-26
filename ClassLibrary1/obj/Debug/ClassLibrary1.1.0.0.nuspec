@@ -7,7 +7,7 @@
     <owners>AuthorName</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package Description</description>
-    <repository type="git" />
+    <repository type="git" commit="15dafa203b7cc81e9329d1db4fe9287d27311be6" />
     <dependencies>
       <group targetFramework=".NETStandard2.1" />
     </dependencies>

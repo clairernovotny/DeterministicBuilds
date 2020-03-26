@@ -14,6 +14,5 @@ D:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.Assemb
 D:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.AssemblyInfo.cs
 D:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.dll
 D:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.pdb
-D:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.csprojAssemblyReference.cache
 D:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.csproj.CoreCompileInputs.cache
 D:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.sourcelink.json
