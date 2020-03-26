@@ -6,6 +6,8 @@
     <Authors>AuthorName</Authors>
     <Company>CompanyName</Company>
     <IncludeSymbols>true</IncludeSymbols>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    
   </PropertyGroup>
 
   <ItemGroup>

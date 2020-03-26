@@ -1,9 +1,0 @@
-c:\dev\ClassLibrary1\ClassLibrary1\bin\Debug\netstandard2.0\ClassLibrary1.deps.json
-c:\dev\ClassLibrary1\ClassLibrary1\bin\Debug\netstandard2.0\ClassLibrary1.dll
-c:\dev\ClassLibrary1\ClassLibrary1\bin\Debug\netstandard2.0\ClassLibrary1.pdb
-c:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.csprojAssemblyReference.cache
-c:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.csproj.CoreCompileInputs.cache
-c:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.AssemblyInfoInputs.cache
-c:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.AssemblyInfo.cs
-c:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.dll
-c:\dev\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.0\ClassLibrary1.pdb
