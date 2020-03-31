@@ -18,6 +18,15 @@ looks like this
 </PropertyGroup>
 ```
 
+For GitHub Actions, the variable is `GITHUB_ACTIONS`, so the result would be:
+```xml
+<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+  <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  <Deterministic>true</Deterministic>
+</PropertyGroup>
+```
+
+
 `EmbedUntrackedSources` should also be set to true so that compiler-generated source, like AssemblyInfo, are included
 in the PDB. Note that there's a [workaround](https://github.com/dotnet/sourcelink/issues/572) needed for many SDK's prior to 3.1.300. You'll need to add
 a `Directory.Build.targets` file with the following:
