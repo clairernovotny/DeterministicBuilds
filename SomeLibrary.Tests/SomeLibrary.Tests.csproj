@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
+  </ItemGroup>
+
+
+  <Target Name="ReferencedPathMaps" BeforeTargets="CoreCompile">
+
+    <MSBuild Projects="@(ProjectReference->'%(FullPath)')"
+         Targets="GetPathMap">
+
+      <Output TaskParameter="TargetOutputs"
+              ItemName="_LocalTopLevelSourceRoot" />
+    </MSBuild>
+
+    <ItemGroup>
+      <_byProject Include="@(_LocalTopLevelSourceRoot->'%(MSBuildSourceProjectFile)')" OriginalPath="%(Identity)" />
+    </ItemGroup>
+
+    <Message Text="@(_byProject->'%(Identity) :: %(OriginalPath)=%(MappedPath)')" Importance="high" />
+  </Target>
+  
+</Project>
