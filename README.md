@@ -38,6 +38,7 @@ a `Directory.Build.targets` file with the following:
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)"/>
+    <EmbeddedFiles Include="$(TargetFrameworkMonikerAssemblyAttributesPath)"/>
   </ItemGroup>
 </Project>
 
