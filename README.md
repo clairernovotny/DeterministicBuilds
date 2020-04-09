@@ -4,8 +4,8 @@ This repo shows how to get a fully deterministic build using [Source Link](https
 Deterministic builds are important as they enable verification that the resulting binary was built from 
 the specified source and provides traceability. 
 
-Deterministic builds require two properties set to true during CI:
-`ContinuousIntegrationBuild` and `Deterministic`. These should not be enabled during local dev or the debugger
+Deterministic builds require a property to be set to true during CI:
+`ContinuousIntegrationBuild`. These should not be enabled during local dev or the debugger
 won't be able to find the local source files.
 
 Therefore, you should use your CI system's variable to set them conditionally. For Azure Pipelines, it 
@@ -14,7 +14,6 @@ looks like this
 ```xml
 <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
   <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  <Deterministic>true</Deterministic>
 </PropertyGroup>
 ```
 
@@ -22,7 +21,6 @@ For GitHub Actions, the variable is `GITHUB_ACTIONS`, so the result would be:
 ```xml
 <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
   <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  <Deterministic>true</Deterministic>
 </PropertyGroup>
 ```
 
