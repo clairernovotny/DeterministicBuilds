@@ -10,18 +10,5 @@ https://github.com/dotnet/sourcelink/issues/572 -->
 
   <ItemGroup>
     <SourceRoot Include="$(NuGetPackageRoot)" Condition="'$(NuGetPackageRoot)' != ''" />
-  </ItemGroup>
-
-  <Target Name="GetPathMap" 
-          DependsOnTargets="InitializeSourceRootMappedPaths" 
-          Returns="@(_LocalTopLevelSourceRoot)"
-          Condition="'$(DeterministicSourcePaths)' == 'true'"
-          >
-
-    <ItemGroup>
-      <_LocalTopLevelSourceRoot Include="@(SourceRoot)" Condition="'%(SourceRoot.NestedRoot)' == ''"/>
-    </ItemGroup>
-
-  </Target>
-  
+  </ItemGroup>  
 </Project>
