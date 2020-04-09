@@ -8,6 +8,7 @@ https://github.com/dotnet/sourcelink/issues/572 -->
     <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)"/>
   </ItemGroup>
 
+  <!-- Workaround for https://github.com/dotnet/sdk/issues/11105 -->
   <ItemGroup>
     <SourceRoot Include="$(NuGetPackageRoot)" Condition="'$(NuGetPackageRoot)' != ''" />
   </ItemGroup>  
