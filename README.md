@@ -47,5 +47,5 @@ a `Directory.Build.targets` file with the following:
 
  
 ## Building locally
-To see/test this locally, build with `dotnet build /p:TF_BUILD=true`. If you examine the resulting package in [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer),
+To see/test this locally, build with `dotnet build -p:TF_BUILD=true` (or `dotnet build -p:GITHUB_ACTIONS=true`, depending on your CI). If you examine the resulting package in [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer),
 it will pass.
