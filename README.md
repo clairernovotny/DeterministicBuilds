@@ -24,12 +24,17 @@ For GitHub Actions, the variable is `GITHUB_ACTIONS`, so the result would be:
 </PropertyGroup>
 ```
 
+Or another option is to pass it to `msbuild` or `dotnet` with `/p:ContinuousIntegrationBuild=true`
 
-`EmbedUntrackedSources` should also be set to true so that compiler-generated source, like AssemblyInfo, are included
+Also  `EmbedUntrackedSources` should be enabled so that compiler-generated source, like AssemblyInfo, are included
 in the PDB. 
 
-**Update** .NET Core SDK 3.1.300 is out and should be used instead of the workarounds below. the 3.1.300 SDK can target all lower target frameworks.
+Add in your .csproj under `<PropertyGroup>`:
+```xml
+ <EmbedUntrackedSources>true</EmbedUntrackedSources>
+```
 
+## Work around for .NET SDK prior 3.1.300
 Note that there's a [workaround](https://github.com/dotnet/sourcelink/issues/572) needed for many SDK's prior to 3.1.300. You'll need to add
 a `Directory.Build.targets` file with the following:
 
@@ -47,5 +52,10 @@ a `Directory.Build.targets` file with the following:
 
  
 ## Building locally
-To see/test this locally, build with `dotnet build -p:TF_BUILD=true` (or `dotnet build -p:GITHUB_ACTIONS=true`, depending on your CI). If you examine the resulting package in [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer),
-it will pass.
+To see/test this locally, build with `dotnet build /p:ContinuousIntegrationBuild=true`. After uploading to nuget.org, you could check it with [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer):
+
+![image](https://user-images.githubusercontent.com/5808377/109431086-f1caf500-7a04-11eb-862c-929197c24dab.png)
+
+
+
+
