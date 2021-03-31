@@ -34,6 +34,8 @@ Add in your .csproj under `<PropertyGroup>`:
  <EmbedUntrackedSources>true</EmbedUntrackedSources>
 ```
 
+or use `/p:EmbedUntrackedSources=true` for `msbuild` or `dotnet`
+
 ## Work around for .NET SDK prior 3.1.300
 Note that there's a [workaround](https://github.com/dotnet/sourcelink/issues/572) needed for many SDK's prior to 3.1.300. You'll need to add
 a `Directory.Build.targets` file with the following:
