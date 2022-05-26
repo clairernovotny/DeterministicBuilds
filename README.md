@@ -24,6 +24,12 @@ For GitHub Actions, the variable is `GITHUB_ACTIONS`, so the result would be:
 </PropertyGroup>
 ```
 
+For GitHub Actions, the variable is `TEAMCITY_VERSION`, so the result would be:
+
+<PropertyGroup Condition="'$(TEAMCITY_VERSION)' != ''">
+  <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+</PropertyGroup>
+
 Or another option is to pass it to `msbuild` or `dotnet` with `/p:ContinuousIntegrationBuild=true`
 
 Also  `EmbedUntrackedSources` should be enabled so that compiler-generated source, like AssemblyInfo, are included
